@@ -19,6 +19,27 @@ namespace Listas
                 oEstudiante1, oEstudiante2, oEstudiante3
             };
 
+            Estudiante oEstudiante4 = new Estudiante("Alex", 3, 4);
+
+
+            lisEstudiante.Add(oEstudiante4); //Metodo Add permite annadir elementos a una lista
+            int cont = lisEstudiante.Count; //Metodo Cout permite contar los elmentos detro de una lista
+
+            Console.WriteLine(cont);
+
+            List<Estudiante> lista2 = new List<Estudiante>
+            {
+                new Estudiante("prueba", 3, 4)
+            };
+
+            lisEstudiante.AddRange(lista2); //Metodo AddRange nos permite annadir una lista 
+
+            foreach (Estudiante estudiante in lisEstudiante)
+            {
+                Console.WriteLine(estudiante.Nombre);
+            }
+
+            
             Console.WriteLine(lisEstudiante[0].Nombre + " "+ lisEstudiante[2].Nombre);
 
             Console.ReadLine();
